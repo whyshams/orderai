@@ -152,7 +152,7 @@ export default function Home() {
           <div></div>
         </div>
       )}
-      <div className="flex">
+      <div className="flex flex-wrap sm:flex-nowrap">
         {suggested?.map((item, index) => (
           <div key={index}>
             <div className="bg-white rounded-lg shadow-md p-4 m-4">
