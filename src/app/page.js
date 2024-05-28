@@ -154,8 +154,8 @@ export default function Home() {
       )}
       <div className="flex">
         {suggested?.map((item, index) => (
-          <div>
-            <div key={index} className="bg-white rounded-lg shadow-md p-4 m-4">
+          <div key={index}>
+            <div className="bg-white rounded-lg shadow-md p-4 m-4">
               <h2 className="text-xl text-gray-900 font-bold">
                 {item.productname}
               </h2>
