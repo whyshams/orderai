@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = "force-dynamic";
 import { useState, useContext } from "react";
 import { generate } from "./actions";
 import { readStreamableValue } from "ai/rsc";

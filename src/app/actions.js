@@ -1,4 +1,5 @@
-"use server";
+"use server"
+
 
 import { streamObject } from "ai";
 import { openai } from "@ai-sdk/openai";
@@ -9,7 +10,7 @@ import { unstable_noStore as noStore } from "next/cache";
 export async function generate(input) {
   noStore();
 
-  ("use server");
+  "use server"
   const stream = createStreamableValue();
 
   (async () => {
@@ -49,3 +50,4 @@ export async function generate(input) {
 
   return { object: stream.value };
 }
+
