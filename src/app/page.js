@@ -6,7 +6,6 @@ import { readStreamableValue } from "ai/rsc";
 import Link from "next/link";
 import ContextApi from "@/ContextApi";
 
-export const dynamic = "force-dynamic";
 export default function Home() {
   const {
     suggested,
