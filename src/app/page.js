@@ -14,6 +14,8 @@ export default function Home() {
     setGeneration,
     prompt,
     setPrompt,
+   loading,
+   setLoading
   } = useContext(ContextApi);
 
   const FoodArray = {
@@ -128,6 +130,8 @@ export default function Home() {
       <button
         className="bg-white text-black pt-6 pb-6 px-10 mb-20 rounded-3xl"
         onClick={async () => {
+          setLoading(true)
+
           const { object } = await generate(
             `"the json object : ${JSON.stringify(FoodArray)}"`
           );
@@ -142,9 +146,11 @@ export default function Home() {
               }
             }
           }
+          setLoading(false)
+        
         }}
       >
-        <strong>ASK</strong>
+        <strong>{!loading? "ASK" : "Loading"}</strong>
       </button>
       {generation?.length && (
         <div>

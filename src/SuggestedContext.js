@@ -7,7 +7,7 @@ const ContextProvider = ({ children }) => {
   const [suggested, setSuggested] = useState([]);
   const [generation, setGeneration] = useState("");
   const [prompt, setPrompt] = useState();
-
+const [loading,setLoading] = useState(false)
   return (
     <ContextApi.Provider
       value={{
@@ -17,6 +17,7 @@ const ContextProvider = ({ children }) => {
         setGeneration,
         prompt,
         setPrompt,
+        loading,setLoading
       }}
     >
       {children}
